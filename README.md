@@ -4,6 +4,19 @@ Public website for the **DRA (DevOps Reference Architecture) Framework** — a r
 
 🔗 **Live site:** <https://georges034302.github.io/dra-framework/>
 
+![version](https://img.shields.io/badge/release-v2.0-21949c)
+
+---
+
+## Release v2.0 — highlights
+
+- **New dashboard UI** — dark sidebar, soft-shadow card grid, refined typography.
+- **SPA-style navigation** — in-place page swaps between Overview, DRA v1.0, and DRA v2.0 with no full reload or flash.
+- **Persistent sidebar** — author block and theme toggle (Light/Dark) render on first paint across every page.
+- **Image library cleanup** — diagram assets renamed to match their card filenames (`dra_<card>.png`); legacy PascalCase names retired.
+- **Content normalization** — all card descriptions tuned to a consistent length for visual parity.
+- **Dual licensing retained** — MIT for code, view-only for DRA research content.
+
 ---
 
 ## About
