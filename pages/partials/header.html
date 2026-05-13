@@ -1,21 +1,58 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-    <div class="container-fluid">
-        <span class="navbar-brand mr-4 d-flex align-items-center">
-            <img src="media/profile/profile.jpg" alt="Profile"
-                class="rounded-circle mr-2"
-                style="height: 32px; width: 32px; object-fit: cover;">
-            DRA Framework &#169;
-        </span>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
-            aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarToggle">
-            <div class="navbar-nav mr-auto">
-                <a class="nav-item nav-link" href="index.html">Home</a>
-                <a class="nav-item nav-link" href="pages/dra1.html">DRAv1.0</a>
-                <a class="nav-item nav-link" href="pages/dra2.html">DRAv2.0</a>
-            </div>
+<aside class="sidebar">
+    <div class="brand">
+        <img src="media/profile/profile.jpg" alt="Author">
+        <div>
+            <div class="brand-name">DRA Framework</div>
+            <div class="brand-tag">DevOps · Multi-Cloud · IoT</div>
         </div>
     </div>
-</nav>
+
+    <div>
+        <div class="side-section-title">Navigate</div>
+        <nav class="side-nav" aria-label="Primary">
+            <a href="index.html" class="active">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg>
+                Overview
+            </a>
+            <a href="pages/dra1.html">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+                DRA v1.0
+            </a>
+            <a href="pages/dra2.html">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15h18"/></svg>
+                DRA v2.0
+            </a>
+        </nav>
+    </div>
+
+    <div>
+        <div class="side-section-title">Sections</div>
+        <nav class="side-nav" aria-label="Sections">
+            <a href="#models">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+                Models
+            </a>
+            <a href="#characteristics">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v6H4zM4 14h16v6H4z"/></svg>
+                Characteristics
+            </a>
+            <a href="#composition">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5-9 5-9-5 9-5zM3 12l9 5 9-5M3 17l9 5 9-5"/></svg>
+                Composition
+            </a>
+        </nav>
+    </div>
+
+    <div class="side-author">
+        <img src="media/profile/profile.jpg" alt="Georges Bou Ghantous">
+        <div>
+            <div class="name">Georges Bou Ghantous</div>
+            <div class="role">Author · Ph.D., UTS</div>
+        </div>
+    </div>
+
+    <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+        <span data-theme-label>Dark mode</span>
+    </button>
+</aside>

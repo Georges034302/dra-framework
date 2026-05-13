@@ -1,46 +1,88 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="DevOps Reference Architecture (DRA) for multi-cloud IoT-application deployment — models, characteristics, and instances.">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DRA Framework">
+    <meta property="og:description" content="DevOps Reference Architecture for multi-cloud IoT-application deployment.">
+    <meta property="og:url" content="https://georges034302.github.io/dra-framework/">
+    <meta property="og:image" content="https://georges034302.github.io/dra-framework/media/profile/profile.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2321949c'/%3E%3Ctext x='16' y='21' font-family='Inter,system-ui,sans-serif' font-size='14' font-weight='700' text-anchor='middle' fill='white'%3EDRA%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/main.css">
     <title>DRA Framework</title>
 </head>
-
 <body>
-    <header class="site-header" data-include="pages/partials/header.html"></header>
+    <div class="app">
+        <div data-include="pages/partials/header.html"></div>
 
-    <main role="main" class="container-fluid">
-        <div class="row">
-            <div class="col-md-4" data-include="pages/partials/publications.html"></div>
-            <div class="col-md-6" id="main-content">
-                <div data-include="pages/cards/dra_framework_overview.html"></div>
-                <div data-include="pages/cards/dra_contextual_model.html"></div>
-                <div data-include="pages/cards/dra_physical_model.html"></div>
-                <div data-include="pages/cards/dra_characteristics.html"></div>
-                <div data-include="pages/cards/dra_abstraction_characteristic.html"></div>
-                <div data-include="pages/cards/dra_human_factor_characteristic.html"></div>
-                <div data-include="pages/cards/dra_infrastructure_characteristic.html"></div>
-                <div data-include="pages/cards/dra_process_characteristic.html"></div>
-                <div data-include="pages/cards/dra_tools_characteristic.html"></div>
-                <div data-include="pages/cards/dra_product_characteristic.html"></div>
-                <div data-include="pages/cards/dra_business_value_characteristic.html"></div>
-                <div data-include="pages/cards/dra_rules_characteristic.html"></div>
-                <div data-include="pages/cards/dra_logical_model.html"></div>
-                <div data-include="pages/cards/dra_operational_model.html"></div>
-                <div data-include="pages/cards/dra_conceptual_model.html"></div>
-                <div data-include="pages/cards/dra_legal_characteristic.html"></div>
-                <div data-include="pages/cards/dra_composition.html"></div>
+        <main class="main" role="main">
+            <div class="content">
+                <header class="page-header">
+                    <h1>DRA Framework</h1>
+                    <p>An interactive overview of the DevOps Reference Architecture for multi-cloud IoT-application deployment.</p>
+                </header>
+
+                <section id="models">
+                    <div class="card-grid">
+                        <div data-include="pages/cards/dra_framework_overview.html"></div>
+                        <div data-include="pages/cards/dra_contextual_model.html"></div>
+                        <div data-include="pages/cards/dra_physical_model.html"></div>
+                        <div data-include="pages/cards/dra_logical_model.html"></div>
+                        <div data-include="pages/cards/dra_operational_model.html"></div>
+                        <div data-include="pages/cards/dra_conceptual_model.html"></div>
+                    </div>
+                </section>
+
+                <section id="characteristics" style="margin-top: 28px;">
+                    <header class="page-header">
+                        <h1 style="font-size:18px;">Characteristics</h1>
+                        <p>Key dimensions that shape DRA instances.</p>
+                    </header>
+                    <div class="card-grid">
+                        <div data-include="pages/cards/dra_characteristics.html"></div>
+                        <div data-include="pages/cards/dra_abstraction_characteristic.html"></div>
+                        <div data-include="pages/cards/dra_human_factor_characteristic.html"></div>
+                        <div data-include="pages/cards/dra_infrastructure_characteristic.html"></div>
+                        <div data-include="pages/cards/dra_process_characteristic.html"></div>
+                        <div data-include="pages/cards/dra_tools_characteristic.html"></div>
+                        <div data-include="pages/cards/dra_product_characteristic.html"></div>
+                        <div data-include="pages/cards/dra_business_value_characteristic.html"></div>
+                        <div data-include="pages/cards/dra_rules_characteristic.html"></div>
+                        <div data-include="pages/cards/dra_legal_characteristic.html"></div>
+                    </div>
+                </section>
+
+                <section id="composition" style="margin-top: 28px;">
+                    <header class="page-header">
+                        <h1 style="font-size:18px;">Composition</h1>
+                        <p>How DRA elements come together to deploy IoT applications.</p>
+                    </header>
+                    <div class="card-grid">
+                        <div data-include="pages/cards/dra_composition.html"></div>
+                    </div>
+                </section>
+
+                <footer class="app-footer">
+                    <span class="copy">© 2020 Georges Bou Ghantous · DRA Framework</span>
+                    <span class="version">v1.0</span>
+                </footer>
             </div>
-            <div class="col-md-2" data-include="pages/partials/about_author.html"></div>
-        </div>
-    </main>
+
+            <div class="aside">
+                <div data-include="pages/partials/about_author.html"></div>
+                <div data-include="pages/partials/publications.html"></div>
+            </div>
+        </main>
+    </div>
 
     <script src="js/include.js"></script>
 </body>
-
 </html>
