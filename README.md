@@ -12,7 +12,7 @@ The DRA Framework formalises a layered architecture for DevOps-enabled, multi-cl
 
 Content is organised into three areas:
 
-- **Framework models** — Contextual, Conceptual, Logical, Physical, Operational, Composition.
+- **Framework models** — Contextual, Conceptual, Logical, Physical, Operational.
 - **Framework characteristics** — Abstraction, Human Factor, Infrastructure, Process, Tools, Product, Business Value, Rules, Legal.
 - **DRA instances** — DRAv1.0 and DRAv2.0 reference deployments with IoT device tables and demo packages.
 
