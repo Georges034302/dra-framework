@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>DRAv2.0</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <div class="container-fluid">
+                <span class="navbar-brand mr-4 d-flex align-items-center">
+                    <img src="../media/profile/profile.jpg" alt="Profile"
+                        class="rounded-circle mr-2"
+                        style="height: 32px; width: 32px; object-fit: cover;">
+                    DRA Framework &#169;
+                </span>
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="../index.html">Home</a>
+                    <a class="nav-item nav-link" href="dra1.html">DRAv1.0</a>
+                    <a class="nav-item nav-link" href="dra2.html">DRAv2.0</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <article class="media content-section">
+                    <div class="media-body">
+                        <div class="article-metadata">
+                            <h4 class="badge badge-info font-italic" style="font-size:18px">IoT-Devices </h4>
+                        </div>
+                        <img class="img-thumbnail" src="../media/images/IoT_2.png"
+                            style="height: 150px; width: 100%;">
+                    </div>
+                </article>
+                <article class="media content-section">
+                    <div class="media-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Device</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Light Sensor</td>
+                                    <td>
+                                        4 LED lights connected to GPIO pins [5, 6, 13, 19]
+                                        on a Raspberry Pi Model 3 B.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Motion Sensor</td>
+                                    <td>
+                                        Motion Sensor + 1 LED connected to a single GPIO pin [37]
+                                        on a Raspberry Pi Model 3 B.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Position Sensor</td>
+                                    <td>
+                                        Position Sensor connected to GPIO pins [36, 38]
+                                        on a Raspberry Pi Model 3 B.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Segment Sensor</td>
+                                    <td>
+                                        Segment Sensor connected to GPIO pins [12, 16, 18],
+                                        with display pins [11, 13, 15, 19]
+                                        on a Raspberry Pi Model 3 B.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-8">
+                <article class="media content-section">
+                    <div class="media-body">
+                        <div class="article-metadata">
+                            <h4 class="border-bottom mr-2 font-weight-bold progress-bar bg-info progress-bar-striped"
+                                style="font-size:20px">DRAv2.0: DRA instance for multi-cloud deployment </h4>
+                        </div>
+                        <img class="img-thumbnail" src="../media/images/DRAv2.png">
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-2">
+                <div class="content-section">
+                    <h5 class="badge badge-info font-italic" style="font-size:18px">Demo Package</h5>
+                    <p>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-light">
+                                <a href="https://goo.gl/3PYfPh" target="_blank">
+                                    Presentation
+                                </a>
+                            </li>
+                            <li class="list-group-item list-group-item-light">
+                                <a href="https://youtu.be/ezhnJqj2_iA" target="_blank">
+                                    Video
+                                </a>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <article class="media content-section">
+                    <div class="media-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Script</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>LED.py</td>
+                                    <td>
+                                        A python script that turns each LED light ON/OFF and subscribes response data
+                                        to the React app using mqtt protocol.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PIR.py</td>
+                                    <td>
+                                        A python script that activates the PIR Motion sensor and subscribes response
+                                        data to the React app using mqtt protocol.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ultra.py</td>
+                                    <td>
+                                        A python script that activates the Position sensor and subscribes response
+                                        data to the React app using mqtt protocol.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7Segment.py</td>
+                                    <td>
+                                        A python script that activates the Segment sensor, enables the user to input
+                                        the display data and subscribes response data to the React app using mqtt
+                                        protocol.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>DRAv1.0</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <div class="container-fluid">
+                <span class="navbar-brand mr-4 d-flex align-items-center">
+                    <img src="../media/profile/profile.jpg" alt="Profile"
+                        class="rounded-circle mr-2"
+                        style="height: 32px; width: 32px; object-fit: cover;">
+                    DRA Framework &#169;
+                </span>
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="../index.html">Home</a>
+                    <a class="nav-item nav-link" href="dra1.html">DRAv1.0</a>
+                    <a class="nav-item nav-link" href="dra2.html">DRAv2.0</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <article class="media content-section">
+                    <div class="media-body">
+                        <div class="article-metadata">
+                            <h4 class="badge badge-info font-italic" style="font-size:18px">IoT-Devices </h4>
+                        </div>
+                        <img class="img-thumbnail" src="../media/images/IoT_1.png">
+                    </div>
+                </article>
+                <article class="media content-section">
+                    <div class="media-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Device</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Light Sensor</td>
+                                    <td>
+                                        4 LED lights connected to GPIO pins [13, 17, 19, 22]
+                                        on a Raspberry Pi Model 3 B.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Motion Sensor</td>
+                                    <td>
+                                        Motion Sensor + 1 LED connected to a single GPIO pin [12]
+                                        on a Raspberry Pi Model 3 B.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-8">
+                <article class="media content-section">
+                    <div class="media-body">
+                        <div class="article-metadata">
+                            <h4 class="border-bottom mr-2 font-weight-bold progress-bar bg-info progress-bar-striped"
+                                style="font-size:20px">DRAv1.0: DRA instance for multi-cloud deployment </h4>
+                        </div>
+                        <img class="img-thumbnail img-responsive" style="height: 960px; width: 100%;"
+                            src="../media/images/DRAv1.png">
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-2">
+                <div class="content-section">
+                    <h5 class="badge badge-info font-italic" style="font-size:18px">Demo Package</h5>
+                    <p>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-light">
+                                <a href="http://tiny.cc/lfhzsz" target="_blank">
+                                    Presentation
+                                </a>
+                            </li>
+                            <li class="list-group-item list-group-item-light">
+                                <a href="https://youtu.be/DmrIAciPKAU" target="_blank">
+                                    Video
+                                </a>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <article class="media content-section">
+                    <div class="media-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Script</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>blink.py</td>
+                                    <td>
+                                        A Python script that activates Sensor_A to blink (ON/OFF) 10 times each in
+                                        sequential pattern
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>readMotionSensor()</td>
+                                    <td>
+                                        A Java method that reads and collects IoT-data from Sensor_B. Every time it
+                                        detects a motion data=ON else data=OFF
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
