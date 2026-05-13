@@ -38,7 +38,8 @@ The site is built as a lightweight static website (plain HTML, CSS, vanilla JS) 
 │   ├── images/             # Diagrams referenced by the cards and DRA pages
 │   └── profile/            # Author profile image
 ├── README.md
-└── LICENSE.MD
+├── LICENSE                 # MIT — covers website code (HTML/CSS/JS scaffolding)
+└── LICENSE-content.md      # View-only — covers DRA content, diagrams, branding
 ```
 
 ---
@@ -57,23 +58,25 @@ The site is built as a lightweight static website (plain HTML, CSS, vanilla JS) 
 
 ## License
 
-Copyright © Georges Bou Ghantous. All rights reserved.
+This repository is **dual-licensed** to keep the website code reusable while protecting the DRA Framework's research content.
 
-This project is **source-available**, not open source. You may:
+### Code — MIT License
 
-- ✅ View and study the source code.
-- ✅ Use it for personal, educational, and internal development purposes.
-- ✅ Reference the DRA Framework in academic work with proper citation.
+The website scaffolding (HTML structure, CSS, JavaScript under `css/`, `js/`, and the structural markup in `index.html` / `pages/**/*.html`) is released under the **MIT License**. You may freely reuse the code with attribution. See [LICENSE](LICENSE).
 
-You may **not**:
+### Content — View-Only
 
-- ❌ Redistribute, sublicense, or sell any part of this project.
-- ❌ Use the content, diagrams, or branding in commercial products without prior written permission.
-- ❌ Remove or alter copyright and attribution notices.
+The DRA Framework **research content** is *not* open source and is provided for **viewing and academic reference only**. This includes:
+
+- All diagrams and images under `media/`.
+- The textual descriptions of the DRA models, characteristics, and instances in `pages/cards/`, `pages/dra1.html`, `pages/dra2.html`, and the partials in `pages/partials/`.
+- The DRA Framework name and branding.
+
+Without prior written permission you may **not** copy, redistribute, modify, or commercially use this content. Academic citation with proper attribution is welcome.
+
+See [LICENSE-content.md](LICENSE-content.md) for the full content license.
 
 For licensing enquiries or permission requests, please contact the author via the links above.
-
-See [LICENSE.MD](LICENSE.MD) for the full license text.
 
 ---
 
