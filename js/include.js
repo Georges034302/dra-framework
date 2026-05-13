@@ -150,9 +150,23 @@
   });
 
   // ---- Boot --------------------------------------------------------------
+  function setActiveNav() {
+    var here = window.location.pathname.replace(/\/+$/, '');
+    document.querySelectorAll('.side-nav a[href]').forEach(function (a) {
+      var url;
+      try { url = new URL(a.href, window.location.href); } catch (_) { return; }
+      var path = url.pathname.replace(/\/+$/, '');
+      if (path === here && (!url.hash || url.hash === '')) {
+        a.classList.add('active');
+      } else {
+        a.classList.remove('active');
+      }
+    });
+  }
   document.addEventListener('DOMContentLoaded', function () {
     loadIncludes().then(function () {
       applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+      setActiveNav();
     });
   });
 })();
