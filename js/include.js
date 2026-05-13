@@ -111,6 +111,37 @@
     if (e.target.closest('.lightbox-close') ||
         (e.target.id === 'dra-lightbox')) {
       closeLightbox();
+      return;
+    }
+
+    // Anchor link handling: smooth-scroll same-page, no-op same-URL,
+    // let the browser handle real cross-document navigation (with
+    // view-transition CSS taking care of the visual smoothness).
+    var a = e.target.closest('a[href]');
+    if (!a) return;
+    if (a.target && a.target !== '' && a.target !== '_self') return;
+    if (a.hasAttribute('download')) return;
+    if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var href = a.getAttribute('href');
+    if (!href || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+    var url;
+    try { url = new URL(a.href, window.location.href); } catch (_) { return; }
+    if (url.origin !== window.location.origin) return;
+
+    var samePath = url.pathname === window.location.pathname;
+    if (samePath) {
+      e.preventDefault();
+      if (url.hash && url.hash.length > 1) {
+        var target = document.querySelector(url.hash);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', url.hash);
+        }
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      return;
     }
   });
 
@@ -119,10 +150,21 @@
   });
 
   // ---- Boot --------------------------------------------------------------
+  function markReady() {
+    document.body.classList.add('is-ready');
+  }
   document.addEventListener('DOMContentLoaded', function () {
-    loadIncludes().then(function () {
-      // Re-apply theme labels in case toggles were inside a partial
-      applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
-    });
+    loadIncludes()
+      .then(function () {
+        // Re-apply theme labels in case toggles were inside a partial
+        applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+      })
+      .finally(function () {
+        // Reveal on the next frame so the just-injected DOM is laid out first.
+        requestAnimationFrame(markReady);
+      });
   });
+  // Belt-and-braces: never leave the page invisible.
+  window.addEventListener('load', markReady);
+  setTimeout(markReady, 1500);
 })();
