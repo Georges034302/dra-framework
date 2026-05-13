@@ -68,13 +68,7 @@
 *::after { box-sizing: border-box; }
 
 html, body { height: 100%; }
-html { scroll-behavior: smooth; }
-
-/* Smooth cross-document navigation in browsers that support it.
-   Falls back gracefully (browser ignores the at-rule). */
-@view-transition { navigation: auto; }
-::view-transition-old(root),
-::view-transition-new(root) { animation-duration: 180ms; }
+html { scroll-behavior: smooth; background: var(--bg); }
 
 body {
     margin: 0;
@@ -85,14 +79,7 @@ body {
     background: var(--bg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* Hidden until include.js marks the document ready, so the sidebar
-       and asides don't pop in after a blank frame. */
-    opacity: 0;
-    transition: opacity 0.18s ease;
 }
-body.is-ready { opacity: 1; }
-/* Safety: if JS is disabled, still show the page. */
-@media (scripting: none) { body { opacity: 1; } }
 
 img { max-width: 100%; display: block; }
 

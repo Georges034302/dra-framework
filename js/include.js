@@ -150,21 +150,9 @@
   });
 
   // ---- Boot --------------------------------------------------------------
-  function markReady() {
-    document.body.classList.add('is-ready');
-  }
   document.addEventListener('DOMContentLoaded', function () {
-    loadIncludes()
-      .then(function () {
-        // Re-apply theme labels in case toggles were inside a partial
-        applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
-      })
-      .finally(function () {
-        // Reveal on the next frame so the just-injected DOM is laid out first.
-        requestAnimationFrame(markReady);
-      });
+    loadIncludes().then(function () {
+      applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+    });
   });
-  // Belt-and-braces: never leave the page invisible.
-  window.addEventListener('load', markReady);
-  setTimeout(markReady, 1500);
 })();
