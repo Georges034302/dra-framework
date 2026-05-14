@@ -94,5 +94,5 @@ For licensing enquiries or permission requests, please contact the author via th
 ---
 
 <p align="center">
-  <sub><sup><span style="color:#9aa0a6">Author: Georges Bou Ghantous © 2020</span></sup></sub>
+  <sub><sup><span style="color:#9aa0a6">Author: Dr. Georges Bou Ghantous © 2020</span></sup></sub>
 </p>
